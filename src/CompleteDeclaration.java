@@ -4,8 +4,8 @@ import java.util.List;
 public final class CompleteDeclaration extends Declaration {
     private List<Gasto> gastos = new ArrayList<>();
 
-    public CompleteDeclaration(double ganhoTributavel, double valorPago, List<Gasto> gastos) {
-        super(ganhoTributavel, valorPago);
+    public CompleteDeclaration(double ganhoTributavel, double valorPago, long id, List<Gasto> gastos) {
+        super(ganhoTributavel, valorPago, id);
         this.gastos = gastos;
     }
 
@@ -15,7 +15,7 @@ public final class CompleteDeclaration extends Declaration {
     }
 
     @Override
-    public double getDespesaDedutivel() {
+    public double getGastosDedutiveis() {
 
     }
 

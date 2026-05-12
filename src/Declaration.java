@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public sealed abstract class Declaration permits SimplifiedDeclaration, CompleteDeclaration{
+public sealed abstract class Declaration permits SimplifiedDeclaration, CompleteDeclaration {
     private long id;
     private double ganhoTributavel;
     private double valorPago;
@@ -11,13 +11,15 @@ public sealed abstract class Declaration permits SimplifiedDeclaration, Complete
         this.id = id;
     }
 
-    public double getValorAPagar() {
-        return getValorImposto() - valorPago - getDespesaDedutivel();
+    public final double getValorAPagar() {
+        return getValorImposto() - valorPago - getGastosDedutiveis();
     }
 
-    public double getDespesaDedutivel() {
-        return 0;
+    public double getGastosDedutiveis() {
+        return 0.0;
     }
+
+    public abstract double getValorImposto();
 
     @Override
     public boolean equals(Object o) {
@@ -39,8 +41,6 @@ public sealed abstract class Declaration permits SimplifiedDeclaration, Complete
                 ", valorPago=" + valorPago +
                 '}';
     }
-
-    public abstract double getValorImposto();
 
     public double getGanhoTributavel() {
         return ganhoTributavel;
