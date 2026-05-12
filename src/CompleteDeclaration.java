@@ -2,21 +2,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class CompleteDeclaration extends Declaration {
-    private List<Gasto> gastos = new ArrayList<>();
+    private final List<Gasto> gastos;
 
-    public CompleteDeclaration(double ganhoTributavel, double valorPago, long id, List<Gasto> gastos) {
+    public CompleteDeclaration(double ganhoTributavel, double valorPago, long id) {
         super(ganhoTributavel, valorPago, id);
-        this.gastos = gastos;
+        gastos = new ArrayList<>();
     }
 
     @Override
     public double getValorImposto() {
-
+        return 0;
     }
 
     @Override
     public double getGastosDedutiveis() {
-
+        return 0.0;
     }
 
     public void addGasto(Gasto gasto) {
