@@ -11,7 +11,28 @@ public final class CompleteDeclaration extends Declaration {
 
     @Override
     public double getValorImposto() {
-        return 0;
+        // 7,5% <R$22.847,88- R$33.919,92>; 15% < R$33.919,93 - R$ 45.012,72>; 22,5% <R$45.012,73 - R$55.976,16> e 27,5%
+        //<acima de R$55.976,16>.
+        double valorImposto = 0.0;
+        double ganhoTributavelAtual = getGanhoTributavel();
+
+        if(ganhoTributavelAtual > 55_976.16) {
+            valorImposto += (ganhoTributavelAtual - 55_976.16) * 0.275;
+            ganhoTributavelAtual = 55_976.16;
+        }
+        if(ganhoTributavelAtual > 45_012.73) {
+            valorImposto += (ganhoTributavelAtual - 45_012.73) * 0.225;
+            ganhoTributavelAtual = 45_012.73;
+        }
+        if(ganhoTributavelAtual > 33_919.93) {
+            valorImposto += (ganhoTributavelAtual - 33_919.93) * 0.15;
+            ganhoTributavelAtual = 33_919.93;
+        }
+        if(ganhoTributavelAtual > 22_847.88) {
+            valorImposto += (ganhoTributavelAtual - 22_847.88) * 0.075;
+        }
+
+        return valorImposto;
     }
 
     @Override
