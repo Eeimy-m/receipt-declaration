@@ -1,4 +1,6 @@
-public abstract class Gasto {
+import java.util.Objects;
+
+public sealed abstract class Gasto permits GastoEducacao, GastoSaude{
     private long id;
     private String descricao;
     private double valor;
@@ -11,6 +13,28 @@ public abstract class Gasto {
         this.descricao = descricao;
         this.valor = valor;
         this.cnpj = cnpj;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Gasto gasto = (Gasto) o;
+        return id == gasto.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(id);
+    }
+
+    @Override
+    public String toString() {
+        return "Gasto{" +
+                "id=" + id +
+                ", descricao='" + descricao + '\'' +
+                ", valor=" + valor +
+                ", cnpj='" + cnpj + '\'' +
+                '}';
     }
 
     public long getId() {
@@ -27,5 +51,17 @@ public abstract class Gasto {
 
     public String getCnpj() {
         return cnpj;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
     }
 }

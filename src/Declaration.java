@@ -10,11 +10,11 @@ public sealed abstract class Declaration permits SimplifiedDeclaration, Complete
     public Declaration() {}
 
     public double getValorAPagar() {
-
+        return getValorImposto() - valorPago - getDespesaDedutivel();
     }
 
     public double getDespesaDedutivel() {
-
+        return 0;
     }
 
     public abstract double getValorImposto();

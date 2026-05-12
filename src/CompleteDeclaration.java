@@ -9,11 +9,16 @@ public final class CompleteDeclaration extends Declaration {
 
     }
 
-    public void addToList(Gasto gasto) {
+    @Override
+    public double getDespesaDedutivel() {
+
+    }
+
+    public void addGasto(Gasto gasto) {
         gastos.add(gasto);
     }
 
-    public void removeFromList(Gasto gasto) {
+    public void removeGasto(Gasto gasto) {
         gastos.remove(gasto);
     }
 }
