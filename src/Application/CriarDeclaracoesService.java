@@ -5,6 +5,11 @@ import Domain.FakeDeclaracaoRepository;
 import Domain.DeclaracaoSimplificada;
 
 public class CriarDeclaracoesService {
+//    private final DeclaracaoRepository repo;
+//
+//    public CriarDeclaracoesService(DeclaracaoRepository repo) {
+//        this.repo = repo;
+//    }
 
     public void criarDeclaracoes(double valorPago, double rendaTributavel) {
         if(rendaTributavel < 0) throw new IllegalArgumentException("Renda tributável inválida");

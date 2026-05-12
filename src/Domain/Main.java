@@ -1,12 +1,13 @@
 package Domain;
 
-import Application.AdicionarGastoTributavel;
-import Application.CriaRelatorioDeclaracoes;
-import Application.CriarDeclaracoesService;
-import Application.TipoGasto;
+import Application.*;
+
+import java.security.Provider;
 
 public class Main {
     static void main() {
+//        final DeclaracaoRepository repo = new DeclaracaoRepository();
+
         final AdicionarGastoTributavel addGastosServices = new AdicionarGastoTributavel();
         final CriaRelatorioDeclaracoes criaRelatorioDeclaracoes = new CriaRelatorioDeclaracoes();
         final CriarDeclaracoesService criarDeclaracoesService = new CriarDeclaracoesService();

@@ -1,7 +1,6 @@
 package Application;
 
 import Domain.Declaracao;
-
 import java.util.Optional;
 
 public interface DeclaracaoRepository {

@@ -5,6 +5,11 @@ import Domain.*;
 import java.lang.classfile.instruction.SwitchCase;
 
 public class AdicionarGastoTributavel {
+//    private final DeclaracaoRepository repo;
+//
+//    public AdicionarGastoTributavel(DeclaracaoRepository repo) {
+//        this.repo = repo;
+//    }
 
     public void adicionarGasto(long id, String descricao, String cnpj, TipoGasto tipo, double valor, String adicional) {
         if(id < 0) throw new IllegalArgumentException("Id inválido"); //Vale a mesma ideia para todos
