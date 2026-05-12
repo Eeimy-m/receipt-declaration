@@ -16,7 +16,17 @@ public final class CompleteDeclaration extends Declaration {
 
     @Override
     public double getGastosDedutiveis() {
-        return 0.0;
+        double totalSaude = gastos.stream()
+                .filter(e -> e instanceof GastoSaude)
+                .mapToDouble(Gasto::getValor)
+                .sum();
+
+        double totalEducacao = gastos.stream()
+                .filter(e -> e instanceof GastoEducacao)
+                .mapToDouble(Gasto::getValor)
+                .sum();
+
+        return Math.min(totalEducacao, GastoEducacao.DEDUCAO_MAX_EDUCA) + Math.min(totalSaude, GastoSaude.DEDUCAO_MAX_SAUDE);
     }
 
     public void addGasto(Gasto gasto) {
