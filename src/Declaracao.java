@@ -1,11 +1,11 @@
 import java.util.Objects;
 
-public sealed abstract class Declaration permits SimplifiedDeclaration, CompleteDeclaration {
+public sealed abstract class Declaracao permits DeclaracaoSimplificada, DeclaracaoCompleta {
     private long id;
     private double ganhoTributavel;
     private double valorPago;
 
-    public Declaration(double ganhoTributavel, double valorPago, long id) {
+    public Declaracao(double ganhoTributavel, double valorPago, long id) {
         this.ganhoTributavel = ganhoTributavel;
         this.valorPago = valorPago;
         this.id = id;
@@ -24,7 +24,7 @@ public sealed abstract class Declaration permits SimplifiedDeclaration, Complete
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Declaration that = (Declaration) o;
+        Declaracao that = (Declaracao) o;
         return id == that.id;
     }
 

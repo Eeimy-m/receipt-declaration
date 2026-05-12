@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public final class CompleteDeclaration extends Declaration {
+public final class DeclaracaoCompleta extends Declaracao {
     private final List<Gasto> gastos;
 
-    public CompleteDeclaration(double ganhoTributavel, double valorPago, long id) {
+    public DeclaracaoCompleta(double ganhoTributavel, double valorPago, long id) {
         super(ganhoTributavel, valorPago, id);
         gastos = new ArrayList<>();
     }

@@ -1,6 +1,6 @@
-public final class SimplifiedDeclaration extends Declaration {
+public final class DeclaracaoSimplificada extends Declaracao {
 
-    public SimplifiedDeclaration(double ganhoTributavel, double valorPago, long id) {
+    public DeclaracaoSimplificada(double ganhoTributavel, double valorPago, long id) {
         super(ganhoTributavel, valorPago, id);
     }
 
