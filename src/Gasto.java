@@ -1,12 +1,10 @@
 import java.util.Objects;
 
-public sealed abstract class Gasto permits GastoEducacao, GastoSaude{
+public sealed abstract class Gasto permits GastoEducacao, GastoSaude {
     private long id;
     private String descricao;
     private double valor;
     private String cnpj;
-
-    public Gasto() {}
 
     public Gasto(long id, String descricao, double valor, String cnpj) {
         this.id = id;
