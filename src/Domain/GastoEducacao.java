@@ -1,3 +1,5 @@
+package Domain;
+
 public final class GastoEducacao extends Gasto {
     public static final double DEDUCAO_MAX_EDUCA = 2_000.0;
     private String nomeInstituicao;
@@ -9,7 +11,7 @@ public final class GastoEducacao extends Gasto {
 
     @Override
     public String toString() {
-        return "GastoEducacao{" +
+        return "Domain.GastoEducacao{" +
                 "nomeInstituicao='" + nomeInstituicao + '\'' +
                 '}';
     }

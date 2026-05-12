@@ -1,3 +1,5 @@
+package Domain;
+
 import java.util.Objects;
 
 public sealed abstract class Gasto permits GastoEducacao, GastoSaude {
@@ -27,7 +29,7 @@ public sealed abstract class Gasto permits GastoEducacao, GastoSaude {
 
     @Override
     public String toString() {
-        return "Gasto{" +
+        return "Domain.Gasto{" +
                 "id=" + id +
                 ", descricao='" + descricao + '\'' +
                 ", valor=" + valor +

@@ -1,3 +1,5 @@
+package Domain;
+
 public final class GastoSaude extends Gasto {
     public static final double DEDUCAO_MAX_SAUDE = 1_500.0;
     private String registroConselho;
@@ -9,7 +11,7 @@ public final class GastoSaude extends Gasto {
 
     @Override
     public String toString() {
-        return "GastoSaude{" +
+        return "Domain.GastoSaude{" +
                 "registroConselho='" + registroConselho + '\'' +
                 '}';
     }

@@ -1,3 +1,5 @@
+package Domain;
+
 import java.util.Objects;
 
 public sealed abstract class Declaracao permits DeclaracaoSimplificada, DeclaracaoCompleta {

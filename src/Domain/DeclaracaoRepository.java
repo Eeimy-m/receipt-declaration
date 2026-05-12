@@ -1,4 +1,5 @@
-import java.util.HashMap;
+package Domain;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Optional;
