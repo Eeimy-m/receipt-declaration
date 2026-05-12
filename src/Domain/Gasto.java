@@ -29,12 +29,7 @@ public sealed abstract class Gasto permits GastoEducacao, GastoSaude {
 
     @Override
     public String toString() {
-        return "Domain.Gasto{" +
-                "id=" + id +
-                ", descricao='" + descricao + '\'' +
-                ", valor=" + valor +
-                ", cnpj='" + cnpj + '\'' +
-                '}';
+        return String.format("| id = %d | cnpj = %s | descrição = %s | valor = R$%.2f |", id, cnpj, descricao, valor);
     }
 
     public long getId() {

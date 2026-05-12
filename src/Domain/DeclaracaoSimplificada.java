@@ -11,4 +11,9 @@ public final class DeclaracaoSimplificada extends Declaracao {
         if(getGanhoTributavel() <= 22_847.88) return 0.0;
         return (getGanhoTributavel() - 22_847.88) * 0.2;
     }
+
+    @Override
+    public String toString() {
+        return "+++ DeclaracaoSimplificada +++" + super.toString();
+    }
 }

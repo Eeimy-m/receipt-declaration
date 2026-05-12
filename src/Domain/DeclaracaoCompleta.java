@@ -2,6 +2,7 @@ package Domain;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public final class DeclaracaoCompleta extends Declaracao {
     private final List<Gasto> gastos;
@@ -50,6 +51,12 @@ public final class DeclaracaoCompleta extends Declaracao {
                 .sum();
 
         return Math.min(totalEducacao, GastoEducacao.DEDUCAO_MAX_EDUCA) + Math.min(totalSaude, GastoSaude.DEDUCAO_MAX_SAUDE);
+    }
+
+    @Override
+    public String toString() {
+        return "+++ DeclaracaoCompleta +++" + "\n" + super.toString() + "\nGastos dedutíveis: \n"
+                + gastos.stream().map(Gasto::toString).collect(Collectors.joining("\n"));
     }
 
     public void addGasto(Gasto gasto) {

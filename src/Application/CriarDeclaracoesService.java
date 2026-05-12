@@ -1,7 +1,7 @@
 package Application;
 
 import Domain.DeclaracaoCompleta;
-import Domain.DeclaracaoRepository;
+import Domain.FakeDeclaracaoRepository;
 import Domain.DeclaracaoSimplificada;
 
 public class CriarDeclaracoesService {
@@ -13,7 +13,7 @@ public class CriarDeclaracoesService {
         final DeclaracaoCompleta declaracaoCompleta = new DeclaracaoCompleta(valorPago, rendaTributavel, 1);
         final DeclaracaoSimplificada declaracaoSimplificada = new DeclaracaoSimplificada(valorPago, rendaTributavel, 2);
 
-        final DeclaracaoRepository repo = new DeclaracaoRepository();
+        final FakeDeclaracaoRepository repo = new FakeDeclaracaoRepository();
         repo.salvar(declaracaoCompleta);
         repo.salvar(declaracaoSimplificada);
     }

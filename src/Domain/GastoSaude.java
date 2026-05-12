@@ -11,9 +11,7 @@ public final class GastoSaude extends Gasto {
 
     @Override
     public String toString() {
-        return "Domain.GastoSaude{" +
-                "registroConselho='" + registroConselho + '\'' +
-                '}';
+        return "| Gastos com Saúde | " + "registro = " + registroConselho + " " + super.toString();
     }
 
     public String getRegistroConselho() {

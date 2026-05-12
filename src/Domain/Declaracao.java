@@ -37,11 +37,8 @@ public sealed abstract class Declaracao permits DeclaracaoSimplificada, Declarac
 
     @Override
     public String toString() {
-        return "Declaration{" +
-                "id=" + id +
-                ", ganhoTributavel=" + ganhoTributavel +
-                ", valorPago=" + valorPago +
-                '}';
+        return String.format("| id = %d | Ganho tributável = R$%.2f | Valor já pago = R$%.2f | Valor imposto = R$%.2f |",
+                id, ganhoTributavel, valorPago, getValorImposto());
     }
 
     public double getGanhoTributavel() {

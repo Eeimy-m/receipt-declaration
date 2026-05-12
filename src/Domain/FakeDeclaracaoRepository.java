@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Optional;
 
-public class DeclaracaoRepository {
+public class FakeDeclaracaoRepository {
     private static final Map<Long, Declaracao> fakeRepository = new LinkedHashMap<>();
 
     public void salvar(Declaracao declaracao) {
