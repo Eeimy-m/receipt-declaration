@@ -29,6 +29,6 @@ public class DeclaracaoRepository {
     }
 
     public Optional<Declaracao> buscarPorId(long id) {
-        return null;
+        return Optional.ofNullable(fakeRepository.get(id));
     }
 }
